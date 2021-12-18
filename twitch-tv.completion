@@ -1,0 +1,11 @@
+#/usr/bin/env bash
+STARTUP_ALIAS=`basename "${BASH_SOURCE[0]}"`
+
+_twitch-tv_completions()
+{
+    words=$($HOME/.local/bin/twitch-live --completion)
+
+    COMPREPLY=( $(compgen -W "${words}" -- "${COMP_WORDS[COMP_CWORD]}") )
+}
+
+complete -o nosort -F _twitch-tv_completions $STARTUP_ALIAS

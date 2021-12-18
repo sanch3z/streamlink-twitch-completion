@@ -1,0 +1,26 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "make",
+            "command": "make",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "make debug",
+            "command": "make debug",
+            "group": "build"
+        },
+        {
+            "type": "shell",
+            "label": "make clean",
+            "command": "make clean",
+            "problemMatcher": []
+        }
+    ],
+    "version": "2.0.0"
+}
